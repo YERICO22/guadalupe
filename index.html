@@ -157,14 +157,11 @@ Con amor infinito, para mi zambita preciosa ❤️
 
 <script>
 // ================== TEXTO ==================
-const mensaje = `
-Hoy 10 de febrero cumplimos un año juntos, un año desde que supe realmente que eras tú con quien quiero hacerme viejito, formar una bella familia y hacer parrilla los domingos.
-
-Quiero que sigas sabiendo que tienes a alguien que te ama muchísimo, te admira demasiado y aspira a pasar una y mil vidas junto a ti.
-
-Gracias por tu amor, tu risa y por hacerme tan feliz.
-Eres mi lugar favorito en el mundo.
-`;
+const mensaje =
+"Hoy 10 de febrero cumplimos un año juntos, un año desde que supe realmente que eras tú con quien quiero hacerme viejito, formar una bella familia y hacer parrilla los domingos.\n\n" +
+"Quiero que sigas sabiendo que tienes a alguien que te ama muchísimo, te admira demasiado y aspira a pasar una y mil vidas junto a ti.\n\n" +
+"Gracias por tu amor, tu risa y por hacerme tan feliz.\n" +
+"Eres mi lugar favorito en el mundo.";
 
 let i = 0;
 const velocidadTexto = 45;
@@ -182,7 +179,7 @@ function escribirTexto() {
 // ================== CARRUSEL ==================
 let index = 0;
 let carruselActivo = false;
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll('.carousel img');
 
 function iniciarCarrusel() {
     if (carruselActivo) return;
