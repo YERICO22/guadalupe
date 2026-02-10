@@ -167,7 +167,7 @@ Eres mi lugar favorito en el mundo.
 `;
 
 let i = 0;
-const velocidadTexto = 45; // menor = más rápido
+const velocidadTexto = 45;
 let escribiendo = false;
 
 function escribirTexto() {
@@ -182,8 +182,7 @@ function escribirTexto() {
 // ================== CARRUSEL ==================
 let index = 0;
 let carruselActivo = false;
-const slides = document.querySelectorAll('.slide'); 
-// si NO usas .slide y usas img, dime y lo adapto
+const slides = document.querySelectorAll('.slide');
 
 function iniciarCarrusel() {
     if (carruselActivo) return;
@@ -193,15 +192,13 @@ function iniciarCarrusel() {
         slides[index].classList.remove('active');
         index = (index + 1) % slides.length;
         slides[index].classList.add('active');
-    }, 5000); // velocidad del carrete
+    }, 5000);
 }
 
 // ================== BOTÓN MAGIA ==================
 function iniciar() {
     // Música
     document.getElementById("musica").play();
-    alert("Feliz primer año, mi chiquita hermosa 💖\nGracias por existir en mi vida y que Dios nos permita coincidir por 10 mil años más.");
-}
 
     // Texto
     if (!escribiendo) {
@@ -211,20 +208,27 @@ function iniciar() {
 
     // Carrusel
     iniciarCarrusel();
+
+    // Mensaje
+    alert(
+        "Feliz primer año, mi chiquita hermosa 💖\n" +
+        "Gracias por existir en mi vida y que Dios nos permita coincidir por 10 mil años más."
+    );
 }
 
-/* Corazones */
+// ================== CORAZONES ==================
 setInterval(() => {
     const heart = document.createElement("div");
     heart.className = "heart";
     heart.innerHTML = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (4 + Math.random() * 3) + "s";
+    heart.style.fontSize = (18 + Math.random() * 14) + "px";
+    heart.style.animationDuration = (6 + Math.random() * 4) + "s";
     document.body.appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 6000);
+    }, 8000);
 }, 700);
 </script>
 
