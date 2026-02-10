@@ -117,11 +117,7 @@ footer {
 
 <h1>Mi Amorcito Preciosa 💕</h1>
 
-<p>
-Hoy <strong>10 de febrero</strong> cumplimos un año juntos.<br>
-Gracias por tu amor, tu risa y por hacerme tan feliz.<br>
-Eres mi lugar favorito en el mundo.
-</p>
+<p id="texto"></p>
 
 <div class="carousel">
     <img src="1.jpeg" class="active">
@@ -189,6 +185,28 @@ setInterval(() => {
         heart.remove();
     }, 6000);
 }, 700);
+
+const mensaje = `
+Hoy 10 de febrero cumplimos un año juntos, un año desde que supe realmente que eras tú con quien quiero hacerme viejito, formar una bella familia y hacer parrilla los domingos.
+
+Quiero que sigas sabiendo que tienes a alguien que te ama muchísimo, te admira demasiado y aspira a pasar una y mil vidas junto a ti.
+
+Gracias por tu amor, tu risa y por hacerme tan feliz.
+Eres mi lugar favorito en el mundo.
+`;
+
+let i = 0;
+const velocidad = 45; // más bajo = más rápido
+
+function escribirTexto() {
+    if (i < mensaje.length) {
+        document.getElementById("texto").innerHTML += mensaje[i] === "\n" ? "<br><br>" : mensaje[i];
+        i++;
+        setTimeout(escribirTexto, velocidad);
+    }
+}
+
+window.onload = escribirTexto;
 </script>
 
 </body>
